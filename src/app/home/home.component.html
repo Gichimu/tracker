@@ -1,0 +1,41 @@
+<div class="container">
+  <mat-form-field class="example-form-field">
+    <input matInput (keyup)="filterCountry($event.target.value)" placeholder="Filter by country" type="text">
+  </mat-form-field>
+  <div class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" matSort >
+      <!-- Position Column -->
+      <ng-container matColumnDef="country">
+        <mat-header-cell *matHeaderCellDef> Country </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.country}} </mat-cell>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="cases">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Total Cases </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.cases}} </mat-cell>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="active">
+        <mat-header-cell *matHeaderCellDef> Active </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.active}} </mat-cell>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="deaths">
+        <mat-header-cell *matHeaderCellDef> Deaths </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.deaths}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="recovered">
+        <mat-header-cell *matHeaderCellDef> Recovered </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.recovered}} </mat-cell>
+      </ng-container>
+    
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>
