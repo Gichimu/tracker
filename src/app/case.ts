@@ -1,6 +1,6 @@
 export class Case {
     country: string;
-    countryInfo: string;   
+    countryFlag: string;   
     cases: number;
     active: number;
     deaths: number;

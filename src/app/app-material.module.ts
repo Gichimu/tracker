@@ -5,7 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
-import { MatPaginatorModule } from '@angular/material/paginator'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -15,7 +17,9 @@ import { MatPaginatorModule } from '@angular/material/paginator'
     MatTableModule,
     MatInputModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule,
+    MatCardModule
   ],
   exports: [
     MatButtonModule,

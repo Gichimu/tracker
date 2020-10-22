@@ -1,0 +1,27 @@
+<div mat-dialog-content>
+    <div class="container">
+        <div class="row">
+            <div class="col left">
+                <img class="country-flag text-center" src="{{data.flag}}" alt="">
+                <h3 class="text-center"><strong>{{data.country}}</strong></h3>
+            </div>
+            <div class="col right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>
+                            <h3><strong>Total Cases: {{data.cases}}</strong></h3>
+                        </mat-card-title>
+                       
+                    </mat-card-header>
+                    <hr>
+                    <mat-card-content>
+                        <p></p>
+                        <p>Active: {{data.active}}</p>
+                        <p>Deaths: {{data.deaths}}</p>
+                        <p>Recoveries: {{data.recovered}}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
