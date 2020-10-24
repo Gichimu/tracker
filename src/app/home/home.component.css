@@ -6,3 +6,11 @@ table {
 mat-cell {
   cursor: pointer;
 }
+
+.col-md-4 {
+  margin-top: 5%;
+}
+
+.inner-card {
+  margin: 3%;
+}

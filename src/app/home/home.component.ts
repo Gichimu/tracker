@@ -23,7 +23,7 @@ export interface DialogData {
 export class HomeComponent implements OnInit {
   ELEMENT_DATA: Case[] = [];
 
-  countryInfo: Case[] = []
+  tweets: any[] = []
   
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -42,18 +42,22 @@ export class HomeComponent implements OnInit {
       this.dataSource.paginator = this.paginator;
     });
 
+
+    this.httpservice.getTweets().subscribe(
+      data => this.tweets = data
+    )
+    
+  }
+
+  getTweets(): void{
+    
+    
+    
   }
 
   getCountryInfo(row: string): void{
     this.dialog.open(DialogContentExampleDialog, {
-      data: {
-        country: row.country,
-        flag: row.countryInfo.flag,
-        cases: row.cases,
-        deaths: row.deaths,
-        active: row.active,
-        recovered: row.recovered
-      }
+      data: row
     })
   }
 
@@ -75,5 +79,5 @@ export class HomeComponent implements OnInit {
   styleUrls: ['dialog-content-example-dialog.css'],
 })
 export class DialogContentExampleDialog {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData){}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any){}
 }
