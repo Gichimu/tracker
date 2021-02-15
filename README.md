@@ -1,5 +1,6 @@
 # Tracker
 
+A Simple Sars-Cov2 tracker by country that utilizes the Covid19 api at [Covid Api](https://corona.lmao.ninja/) and the Twitter Api.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
 ## Development server
