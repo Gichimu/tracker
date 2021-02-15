@@ -15,7 +15,7 @@ export class HttpService {
   constructor(private readonly http: HttpClient) { }
 
   getTweets(): Observable<any>{
-    const headers = new HttpHeaders({ 'Authorization': "Bearer AAAAAAAAAAAAAAAAAAAAAKKwIwEAAAAArqZP2YTU4tkL7ibibbtm9eIXAzY%3DHj0AmyiVXvKK6PJ4veJW7pTWvTQ2E8EKy2cWoYU2oegEZqhAQ5",
+    const headers = new HttpHeaders({ 'Authorization': "Bearer AAAAAAAAAAAAAAAAAAAAAKKwIwEAAAAAlxNqCzbxEVCCSRvpVZn2kF1XdbI%3D2REXBbkX1HKKXJ1G0A2o9ilSdBQA3L1HJcYrAvWBvqU7qH7WWl",
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Access-Control-Allow-Headers': 'Content-Type',
