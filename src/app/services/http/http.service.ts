@@ -15,11 +15,13 @@ export class HttpService {
   constructor(private readonly http: HttpClient) { }
 
   getTweets(): Observable<any>{
-    const headers = new HttpHeaders({ 'Authorization': "Bearer AAAAAAAAAAAAAAAAAAAAAKKwIwEAAAAAlxNqCzbxEVCCSRvpVZn2kF1XdbI%3D2REXBbkX1HKKXJ1G0A2o9ilSdBQA3L1HJcYrAvWBvqU7qH7WWl",
+    const headers = new HttpHeaders({
+      Authorization:
+        "Bearer AAAAAAAAAAAAAAAAAAAAAKKwIwEAAAAAbny7tdwe0TzD3njR%2BTBn70l61zo%3Dt9ChiWyUYKKr1mRH8XeO39CPb9MAY7NlQW5OJDVtpes4lzrJD3",
       'Content-Type': 'application/json',
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Allow-Origin': 'true', 
+      'Access-Control-Allow-Origin': 'true',
     });
 
     return this.http.get(this.tweetUri, {headers})                                                                                                                                                                               
