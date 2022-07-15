@@ -43,9 +43,9 @@ export class HomeComponent implements OnInit {
     });
 
 
-    this.httpservice.getTweets().subscribe(
-      data => this.tweets = data
-    )
+    // this.httpservice.getTweets().subscribe(
+    //   data => this.tweets = data
+    // )
     
   }
 

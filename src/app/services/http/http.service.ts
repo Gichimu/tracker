@@ -11,7 +11,7 @@ export class HttpService {
 
 
   private tweetUri = 'https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=WHO';
-  private uri = 'https://corona.lmao.ninja/v3/covid-19/countries/'
+  private uri = 'https://disease.sh/v3/covid-19/countries/'
   constructor(private readonly http: HttpClient) { }
 
   getTweets(): Observable<any>{
